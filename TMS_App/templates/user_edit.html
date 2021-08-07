@@ -1,0 +1,36 @@
+{% extends 'user_base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    <div class='add_form' align=center>
+
+        <form  class='add_inputs_form' action='/editticket/{{edit_ticket.id}}' method='POST'>
+            {% csrf_token %}
+            <h1 align=left class='add_inputs_heading'>Edit Ticket</h1>
+
+            <div class='inputboxes'>
+                <input name='Type' type='text'  value={{edit_ticket.Type}}> 
+            </div><br>
+            
+            <div class='inputboxes'>
+                <input name='Floor' type='tel'  value='{{edit_ticket.Floor}}'>
+            </div><br>
+
+            <div class='inputboxes'>
+                <input name='Desk_No' type="text"  value='{{edit_ticket.Desk_No}}'>
+            </div>  <br>
+
+            <div class='inputboxes'>
+                <textarea name='Description' type="text" cols='30' rows="5">{{edit_ticket.Description}}</textarea>
+            </div><br>
+
+            <button class='btn2' type='submit' name='' value=''>Save</button>
+        </form>
+
+        <h1 style="color: rgb(96, 245, 96);">{{output_text}}</h1>
+
+    </div>
+
+{% endblock %}

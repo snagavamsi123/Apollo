@@ -1,0 +1,23 @@
+
+<div class="body_text" align='center'>
+    <h1 style="color:greenyellow">Welcome</h1>
+</div>
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='home_middle_btn' align='center'>
+    <ul class="home_middle_btn_ul">
+        <li><a href='{%url "signup" %}'>Sign Up</a></li>
+        <li><a href='{%url "userlogin" %}'>User Login</a></li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

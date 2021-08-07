@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method='POST' action=''>
+    <br><br><br><br>
+            {% csrf_token %}
+            <div class='signup_head_message'>
+                <h4 style="color:rgb(195, 0, 255);">{{message}}</h4>
+            </div>
+
+
+            <div class='signup_head'> 
+                                     
+                <h1>User Signup</h1>
+            </div>
+            
+            <div class='signupdiv'>
+  
+                <table class='signuptable'>
+                    {% for field in form %}
+                                    <tr><th>{{field.label_tag }}</th><td>{{field}}</td></tr>
+                    {% endfor %}
+                </table>
+
+                <div class='errors'>
+                    {% for error,error_message in form.errors.items %}
+                        <h3 class='error'>{{ error_message }}</h3>
+                    {% endfor %}
+                </div>
+                <div class='submit_btn'>
+                    <button class='btn'>Signup</button>
+            </div>
+
+            </div>
+
+{%  endblock %}

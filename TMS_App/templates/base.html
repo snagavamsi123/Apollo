@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style2.css' %}">
+    <title>Home</title>
+    
+    <script type="text/javascript">
+
+        function preback(){window.history.forward();}
+        setTimeout("preback()",0);
+        window.onload=function(){null};
+    
+    </script>
+</head>
+<body class='base_index_body'>
+    <h2 align=left data-content='activity-title' class='activity-title'>Apollo Tele Health</h2>
+    <header align='right' class='header_btns'>
+        <div class='header_div'></div>
+            <form action='{%url "signup" %}'>
+                <button class='btn'>Signup</button>
+            </form>
+            <form action='{%url "userlogin" %}'>
+                <button class='btn'>User Login</button>
+            </form>
+            <form action='{%url "adminlogin" %}'>
+                <button class='btn'>Admin Login</button>
+            </form>
+        </div>
+    </header>
+
+    <br><br><br><br>
+
+        {% block content %}
+        
+        {% endblock %}
+             
+</body>
+</html>

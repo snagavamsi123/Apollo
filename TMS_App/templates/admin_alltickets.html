@@ -1,0 +1,39 @@
+{% extends 'admin_base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    <div class="contacts_table" align='center'>
+
+        <h1  class='contactbook_heading'>ALL TICKETS</h1>
+        <table border="1">
+            <tr class='table_heading' align="center" style="color: rgb(72, 255, 0);font-weight:bolder;">
+                <td>User</td>
+                <td>Type</td>
+                <td>Floor</td>
+                <td>Desk_No</td>
+                <td>Description</td>
+                <td>Status</td>
+                <td>Admin comments</td>
+                <td>Edit</td>
+            </tr>
+            {% for result in data %}
+                <tr align="center" style="color: rgb(0, 0, 0);"  id={{result.number}}>
+                    <td>{{result.User}}</td>
+                    <td>{{result.Type}}</td>
+                    <td>{{result.Floor}}</td>
+                    <td>{{result.Desk_No}}</td>
+                    <td>{{result.Description}}</td>
+                    <td>{{result.Status}}</td>
+                    <td>{{result.Admin_comments}}</td>
+                    <td id="result.id"><a style="color: rgb(255, 0, 0);font-weight: bolder;" href="/admin_editticket/{{result.id}}"> Edit </a> </td>
+                    <!--td id="result.id"><a href="/delete/{{result.id}}"> Delete </a></td-->
+                </tr>
+            {%endfor%}
+
+        </table>
+
+    </div>
+
+{% endblock %}

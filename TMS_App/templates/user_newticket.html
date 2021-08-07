@@ -1,0 +1,28 @@
+{% extends 'user_base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+    
+    <div class='add_form' align=center>
+
+        <form  class='add_inputs_form' action='{%url "newticket" %}' method='POST'>
+            {% csrf_token %}
+            <h2>{{message}}</h2>
+            <h1 align=left class='add_inputs_heading' style="color: yellowgreen;">Raise A New Ticket</h1>
+            <div>
+                <table class=usernewticket>
+                {{form.as_table}}
+                </table>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+
+
+    </div>
+{% endblock %}
+

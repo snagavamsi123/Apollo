@@ -1,0 +1,19 @@
+Here im used :
+
+Python 3.7.8
+Django 3.2
+Mysql DB
+
+Process :
+
+1.install requirements  (pip install -r requirements.txt)
+2.change database parameters in settings.py (like username password , port and name)
+3.create a DB in MYsql or any others by using  the command 'CREATE DATABASE `apollo or DB name`'
+4.Next enter the command in cmd with this project folder path
+  --------->>python manage.py makemigrations
+5.And Next enter the command in cmd with this project folder path
+ --------->>python manage.py migrate
+6. At last Run the code by entering the command 'python manage.py runserver' in cmd with this project folder path
+
+
+please try to watch that output video file

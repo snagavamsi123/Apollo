@@ -1,0 +1,52 @@
+{% extends 'admin_base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    <div class='add_form' align=center>
+
+        <form  class='add_inputs_form' action='/admin_editticket/{{edit_ticket.id}}' method='POST'>
+            {% csrf_token %}
+            <h1 align=left class='add_inputs_heading'>Edit Ticket</h1>
+            <div class='inputboxes'>
+                <input name='User' type='text'  value={{edit_ticket.User}} readonly='readonly'> 
+            </div>
+
+            <div class='inputboxes'>
+                <input name='Type' type='text'  value={{edit_ticket.Type}}> 
+            </div>
+            
+            <div class='inputboxes'>
+                <input name='Floor' type='tel'  value='{{edit_ticket.Floor}}'>
+            </div>
+
+            <div class='inputboxes'>
+                <input name='Desk_No' type="text"  value='{{edit_ticket.Desk_No}}'>
+            </div>
+
+            <div class='inputboxes'>
+                <textarea name='Description' type="text" cols='27' rows="5">{{edit_ticket.Description}}</textarea>
+            </div>
+            
+            <div class='inputboxes'>
+                <select name='Status' style="width: 100%;height:20%"  value='{{edit_ticket.Status}}'>
+                    <option value={{edit_ticket.Status}}>{{edit_ticket.Status}}</option>
+                    <option value="OPEN">STATUS : OPEN</option>
+                    <option value="PENDING">STATUS : PENDING</option>
+                    <option value="CLOSED">STATUS : CLOSED</option>
+                </select>
+            </div>
+
+            <div class='inputboxes'>
+                <textarea name='Admin_comments' type="text" cols='27' rows="5">{{edit_ticket.Admin_comments}}</textarea>
+            </div>
+
+            <button class='btn2' type='submit' name='' value=''>Save</button>
+        </form>
+
+        <h1 style="color: rgb(96, 245, 96);">{{output_text}}</h1>
+
+    </div>
+
+{% endblock %}

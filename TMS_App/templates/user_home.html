@@ -1,0 +1,17 @@
+
+{% extends 'user_base.html' %}
+
+{% block content %}
+<div class="body_text" align='center'>
+    <h1 style="color: greenyellow;">Welcome {{name}}</h1>
+</div>
+<div class='home_middle_btn' align='center'>
+    <ul class="home_middle_btn_ul">
+        <li><a href='{%url "newticket" %}'>New Ticket</a></li>
+        <li><a href='{%url "oldtickets" %}'>Old Tickets</a></li>
+    </ul>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method='POST' action='{%url "userlogin" %}'>
+            {% csrf_token %}
+
+            <div class='signup_head'>
+                <h4 style="color:rgb(30, 255, 0);">{{message}}</h4>
+                <h1 style="color:rgb(30, 255, 0);">User Login</h1>
+            </div>
+
+
+            <div class='signupdiv'>
+                <table class="signuptable">
+                    {{ form }}
+                </table>
+            </div>
+            <div class= 'login_submit_btn'>
+                
+                <input type="submit">
+            </div>
+
+
+        </form>
+
+
+
+
+
+
+{%  endblock %}

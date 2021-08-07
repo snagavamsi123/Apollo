@@ -1,0 +1,180 @@
+.header_btns{
+    background-color: rgb(92, 104, 121);
+    padding: 20px;
+    position: absolute;
+    top: 0%; 
+    left:0%;
+    width: 97%;   
+}
+
+.client_header_btns{
+background-color: skyblue;
+    padding: 20px;
+    position: absolute;
+    top: 0%; 
+    left:0%;
+    width: 97%; 
+}
+
+
+.exe_index_body{
+    background-image: url('/static/images/2.jpg');
+}
+
+.base_index_body{
+    background-image: url('/static/images/7.jpg');
+}
+
+form{
+    display: inline-block;
+}
+
+.header_div{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    padding: 10px;
+}
+.signup_head{
+    position: absolute;
+    left: 40%;
+    top: 18%;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.clientdetails_head{
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+
+.signupdiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.submit_btn{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login_submit_btn{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bolder;
+}
+ 
+
+.login_note{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bolder;
+}
+.login_note h3{
+    color: rgb(106, 119, 231);
+}
+
+.btn{
+    width: 100px;
+    height: 30px;
+}
+button:hover{
+    color:rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.body_text{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+.middle_btn{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    padding: 5px 5px;
+}
+.middle_btn_ul{
+    display: flex;
+    float: center;
+    margin-top: 10px;
+}
+
+.middle_btn_ul li{
+    display: inline-block;
+    margin-inline-end: 1.0cm;
+}
+
+.middle_btn_ul li a{
+    font-weight: bolder;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+.middle_btn_ul li a:hover{
+    background-color: rgb(181, 126, 233);
+    color: rgb(0, 0, 0);
+}
+
+input{
+    height: 25px;
+    width: 200px;
+    border-radius: 4px;
+}
+input:hover{
+    border: 2px solid #49ff76;
+}
+
+
+.report_table{
+    border-collapse: collapse;
+    border-color:white;
+}
+.report_table tr td{
+    border: 1px solid #dddddd;
+    border-width:medium;
+    padding:8px;
+    border-color:white;
+    color: white;
+}
+
+.report_table_heading td{
+    color: rgb(6, 226, 255);
+    width: 200px;
+}
+
+.report_table_heading{
+    color: rgb(6, 226, 255);
+
+}
+
+.error{
+    color: rgb(255, 38, 0);
+}
+
+.errors{
+    position: absolute;
+    top: 140%;
+    left: 0%;
+    
+}
+
+
+
+
+
+
